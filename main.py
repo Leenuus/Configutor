@@ -20,7 +20,6 @@ for p in parsers:
     name = p.stem
     lang = Language(p, p.stem)
     LANGS[name] = lang
-# ic(LANGS)
 
 
 """
@@ -76,6 +75,7 @@ def export_profiles(tree_root: Node, query: Query):
         node = c[0]
         if b"EXPORT" not in node.text:
             continue
+        # TODO: parse modline and generate different profiles from it
         # modline = node.text
         # parse_modline(modline, node)
         content = node.next_named_sibling
@@ -96,11 +96,11 @@ def _parse_modline(tree_root: Node, node: Node):
 
 
 def main():
-    files = glob(f"{HOME}/.config/fish/conf.d/*.fish")
+    config_glob = "./test/fish/*.fish"
+    files = glob(config_glob)
 
     artifact = {}
     for file in files:
-        # file = "./fish/alias.fish"
         with open(file, "rb") as f:
             src = f.read()
         if DEBUG:

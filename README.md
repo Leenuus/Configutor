@@ -19,6 +19,10 @@ Configutor is a tool helping you __dispatching your configurations everywhere__ 
 3. For 5, a tool to drop some configurations with information inside the configuration's comments.
 4. Add up point 7, use a vim modline-like syntax and treesitter to parse and generate config.
 
+## Features
+
+__Simply add a comment line with word `EXPORT` inside right ahead of the _code blocks_ you want to export__. Configutor then extract those configurations and aggregate them into a single file.
+
 ## TODO
 
 - [ ] Parse and generate `lua` configurations.
