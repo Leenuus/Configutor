@@ -25,9 +25,9 @@ __Simply add a comment line with word `EXPORT` inside right ahead of the _code b
 
 ## TODO
 
-- [ ] Parse and generate `lua` configurations.
-- [ ] Parse and generate `bash` configurations.
-- [ ] Remove hardcoded.
+- [x] Parse and generate `lua` configurations.
+- [x] Parse and generate `bash` configurations.
+- [x] Remove hardcoded.
 - [ ] Receive command line args.
 - [ ] Update python tree-sitter bindings to newest version, however compiled __fish__ parser python bindings seem __NOT TO WORK __ on newest version.
 
